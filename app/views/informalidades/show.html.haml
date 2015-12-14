@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Titulo:
+  = @informalidade.titulo
+%p
+  %b Descricao:
+  = @informalidade.descricao
+%p
+  %b Prestador:
+  = @informalidade.prestador
+%p
+  %b Cliente:
+  = @informalidade.cliente
+
+= link_to 'Edit', edit_informalidade_path(@informalidade)
+\|
+= link_to 'Back', informalidades_path

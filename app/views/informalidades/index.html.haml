@@ -1,0 +1,27 @@
+%h1 Listing informalidades
+
+%table
+  %thead
+    %tr
+      %th Titulo
+      %th Descricao
+      %th Prestador
+      %th Cliente
+      %th
+      %th
+      %th
+
+  %tbody
+    - @informalidades.each do |informalidade|
+      %tr
+        %td= informalidade.titulo
+        %td= informalidade.descricao
+        %td= informalidade.prestador
+        %td= informalidade.cliente
+        %td= link_to 'Show', informalidade
+        %td= link_to 'Edit', edit_informalidade_path(informalidade)
+        %td= link_to 'Destroy', informalidade, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Informalidade', new_informalidade_path
