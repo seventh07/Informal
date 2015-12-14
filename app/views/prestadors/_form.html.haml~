@@ -3,7 +3,7 @@
   .form-inputs
     = f.input :nome
     = f.input :cpf
-    = f.input :telefone
+    = f.label :telefone
     = f.association :servico, label_method: :nome
 
   .form-actions

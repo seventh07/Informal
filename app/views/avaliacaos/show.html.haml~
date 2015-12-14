@@ -5,7 +5,7 @@
   = @avaliacao.nota
 %p
   %b Informalidade:
-  = @avaliacao.informalidade.titulo
+  = @avaliacao.informalidade
 
 = link_to 'Edit', edit_avaliacao_path(@avaliacao)
 \|

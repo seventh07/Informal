@@ -2,7 +2,7 @@
 
   .form-inputs
     = f.input :nota
-    = f.association :informalidade, label_method: :titulo
+    = f.association :prestador, label_method: :nome
 
   .form-actions
     = f.submit 'Save'

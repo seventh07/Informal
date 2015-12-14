@@ -6,6 +6,10 @@ require 'spec_helper'
 
 feature 'gerenciar prestador' do
 
+before(:each) do
+  @servico = FactoryGirl.create(:servico, nome: "Alvenaria")
+end
+
   scenario 'incluir prestador' do # , :js => true  do
 
     visit new_prestador_path
@@ -31,7 +35,8 @@ feature 'gerenciar prestador' do
       fill_in 'Nome', :with => "Jao"
       fill_in 'Cpf', :with => "723"
       fill_in 'Telefone', :with => "4498"
-      fill_in 'Servico', :with => "Alvenaria"
+      select "Alvenaria", from: "Servico"
+      #fill_in 'Servico', :with => "Alvenaria"
       click_button 'Save'
 
       expect(page).to have_content 'Nome: Jao'

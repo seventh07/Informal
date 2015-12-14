@@ -6,6 +6,10 @@ require 'spec_helper'
 
 feature 'gerenciar avaliacao' do
 
+before(:each) do
+  @informalidade = FactoryGirl.create(:informalidade, titulo: "Conserto Janela")
+end
+
   scenario 'incluir avaliacao' do # , :js => true  do
 
     visit new_avaliacao_path
@@ -29,11 +33,12 @@ feature 'gerenciar avaliacao' do
    def preencher_e_verificar_avaliacao
 
       fill_in 'Nota', :with => 9.5
-      fill_in 'Informalidade', :with => "45"
+      select "Conserto Janela", from: "Informalidade"
+      #fill_in 'Informalidade', :with => "45"
       click_button 'Save'
 
-      expect(page).to have_content 'Nome: Adrian'
-      expect(page).to have_content 'Cpf: 112233'
-      expect(page).to have_content 'Telefone: 445566'      
+      expect(page).to have_content 'Nota: 9.5'
+      expect(page).to have_content 'Informalidade: Conserto Janela'
+     
    end
 end
