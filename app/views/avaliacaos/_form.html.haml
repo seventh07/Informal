@@ -1,0 +1,16 @@
+= form_for @avaliacao do |f|
+  - if @avaliacao.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@avaliacao.errors.count, "error")} prohibited this avaliacao from being saved:"
+      %ul
+        - @avaliacao.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :nota
+    = f.text_field :nota
+  .field
+    = f.label :informalidade
+    = f.text_field :informalidade
+  .actions
+    = f.submit 'Save'

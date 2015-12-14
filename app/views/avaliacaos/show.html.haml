@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Nota:
+  = @avaliacao.nota
+%p
+  %b Informalidade:
+  = @avaliacao.informalidade
+
+= link_to 'Edit', edit_avaliacao_path(@avaliacao)
+\|
+= link_to 'Back', avaliacaos_path
