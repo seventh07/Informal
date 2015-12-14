@@ -11,7 +11,7 @@
   = @prestador.telefone
 %p
   %b Servico:
-  = @prestador.servico.nome
+  = @prestador.servico
 
 = link_to 'Edit', edit_prestador_path(@prestador)
 \|

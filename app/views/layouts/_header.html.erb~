@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Informal</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= content_for?(:title) ? yield(:title) : "Informal" %></title>
+    <%= csrf_meta_tags %>
 
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+
+    <%= javascript_include_tag "application" %>
+  </head>
+  <body>
 <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -27,8 +31,3 @@
         </div>
       </div>
     </div>
-
-<%= yield %>
-
-</body>
-</html>

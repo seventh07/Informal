@@ -13,6 +13,8 @@ gem 'sass-rails', '~> 5.0'
     gem 'jquery-inputmask-rails'
 
     gem 'rspec'
+    gem 'bootstrap-sass'
+    gem 'autoprefixer-rails'
 
     gem 'turbolinks'
     gem 'jbuilder'

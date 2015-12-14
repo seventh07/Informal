@@ -24,4 +24,4 @@
 
 = link_to new_cliente_path, class: 'btn btn-success' do
   %i.glyphicon.glyphicon-plus
-  Novo Cliente
+  New Cliente

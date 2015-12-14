@@ -27,7 +27,7 @@ end
 
     avaliacao = FactoryGirl.create(:avaliacao)
     visit avaliacaos_path
-    click_on 'Excluir'
+    click_on 'Destroy'
   end
 
    def preencher_e_verificar_avaliacao

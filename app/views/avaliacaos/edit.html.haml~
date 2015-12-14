@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @avaliacao
+= link_to 'Mostrar', @avaliacao
 \|
 = link_to 'Voltar', avaliacaos_path
