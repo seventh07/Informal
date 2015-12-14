@@ -1,0 +1,21 @@
+%h1 Listing servicos
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th
+      %th
+      %th
+
+  %tbody
+    - @servicos.each do |servico|
+      %tr
+        %td= servico.nome
+        %td= link_to 'Show', servico
+        %td= link_to 'Edit', edit_servico_path(servico)
+        %td= link_to 'Destroy', servico, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Servico', new_servico_path
