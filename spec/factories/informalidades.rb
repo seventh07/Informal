@@ -1,9 +1,8 @@
 FactoryGirl.define do
   factory :informalidade do
-    titulo "MyString"
-descricao "MyString"
-prestador nil
-cliente nil
+    titulo "Conserto de Janela"
+    descricao "Preciso de alguém que conserte minha janela"
+    prestador nil
+    cliente nil
   end
-
 end

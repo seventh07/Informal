@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :servico do
-    nome "Alvenaria"
+    nome "MyString"
   end
+
 end

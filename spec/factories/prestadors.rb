@@ -1,9 +1,8 @@
 FactoryGirl.define do
   factory :prestador do
-    nome "MyString"
-cpf "MyString"
-telefone "MyString"
-servico nil
+    nome "Jao"
+    cpf "111444555"
+    telefone "38313831"
+    servico nil
   end
-
 end
