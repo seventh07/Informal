@@ -1,0 +1,25 @@
+%h1 Listing clientes
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Cpf
+      %th Telefone
+      %th
+      %th
+      %th
+
+  %tbody
+    - @clientes.each do |cliente|
+      %tr
+        %td= cliente.nome
+        %td= cliente.cpf
+        %td= cliente.telefone
+        %td= link_to 'Show', cliente
+        %td= link_to 'Edit', edit_cliente_path(cliente)
+        %td= link_to 'Destroy', cliente, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cliente', new_cliente_path
