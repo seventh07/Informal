@@ -6,6 +6,11 @@ require 'spec_helper'
 
 feature 'gerenciar informalidade' do
 
+before(:each) do
+  @cliente = FactoryGirl.create(:informalidade, nome: "Adrian")
+  @prestador = FactoryGirl.create(:informalidade, nome: "Jao")
+end
+
   scenario 'incluir informalidade' do # , :js => true  do
 
     visit new_informalidade_path
@@ -30,8 +35,10 @@ feature 'gerenciar informalidade' do
 
       fill_in 'Titulo', :with => "Conserto de Janela"
       fill_in 'Descricao', :with => "Preciso de alguem para consertar janelas"
-      fill_in 'Cliente', :with => "Adrian"
-      fill_in 'Prestador', :with => "Jao"
+      select "Adrian", from: "Cliente"
+      select "Jao", from: "Prestador"
+      #fill_in 'Cliente', :with => "Adrian"
+      #fill_in 'Prestador', :with => "Jao"
       click_button 'Save'
 
       expect(page).to have_content 'Cliente: Adrian'

@@ -8,10 +8,10 @@
   = @informalidade.descricao
 %p
   %b Prestador:
-  = @informalidade.prestador.nome
+  = @informalidade.prestador
 %p
   %b Cliente:
-  = @informalidade.cliente.nome
+  = @informalidade.cliente
 
 = link_to 'Edit', edit_informalidade_path(@informalidade)
 \|
