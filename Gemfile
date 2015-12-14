@@ -12,6 +12,8 @@ gem 'sass-rails', '~> 5.0'
     gem 'jquery-turbolinks'
     gem 'jquery-inputmask-rails'
 
+    gem 'rspec'
+
     gem 'turbolinks'
     gem 'jbuilder'
 
