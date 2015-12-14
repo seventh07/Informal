@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @prestador.nome
+%p
+  %b Cpf:
+  = @prestador.cpf
+%p
+  %b Telefone:
+  = @prestador.telefone
+%p
+  %b Servico:
+  = @prestador.servico
+
+= link_to 'Edit', edit_prestador_path(@prestador)
+\|
+= link_to 'Back', prestadors_path

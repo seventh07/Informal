@@ -1,0 +1,27 @@
+%h1 Listing prestadors
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Cpf
+      %th Telefone
+      %th Servico
+      %th
+      %th
+      %th
+
+  %tbody
+    - @prestadors.each do |prestador|
+      %tr
+        %td= prestador.nome
+        %td= prestador.cpf
+        %td= prestador.telefone
+        %td= prestador.servico
+        %td= link_to 'Show', prestador
+        %td= link_to 'Edit', edit_prestador_path(prestador)
+        %td= link_to 'Destroy', prestador, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Prestador', new_prestador_path

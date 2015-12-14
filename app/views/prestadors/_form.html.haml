@@ -1,0 +1,22 @@
+= form_for @prestador do |f|
+  - if @prestador.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@prestador.errors.count, "error")} prohibited this prestador from being saved:"
+      %ul
+        - @prestador.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .field
+    = f.label :cpf
+    = f.text_field :cpf
+  .field
+    = f.label :telefone
+    = f.text_field :telefone
+  .field
+    = f.label :servico
+    = f.text_field :servico
+  .actions
+    = f.submit 'Save'
